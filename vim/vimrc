@@ -1,0 +1,40 @@
+set nocompatible
+filetype off
+
+" highlighting
+syntax on
+set background=dark
+set cursorline
+"set relativenumber
+"set number
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+" tabbing
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+" folding settings
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-startify'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_underline=0

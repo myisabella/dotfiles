@@ -6,7 +6,7 @@ syntax on
 set background=dark
 set cursorline
 "set relativenumber
-"set number
+set number
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
@@ -35,6 +35,11 @@ Plugin 'mhinz/vim-startify'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" using solarized color scheme
 colorscheme solarized
 let g:solarized_termcolors=256
-let g:solarized_underline=0
+
+" searching
+: set incsearch
+: set hlsearch
+

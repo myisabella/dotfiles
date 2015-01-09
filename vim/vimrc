@@ -38,6 +38,8 @@ filetype plugin indent on    " required
 " using solarized color scheme
 colorscheme solarized
 let g:solarized_termcolors=256
+" force to use 256 color to avoid strange color in linux terminal
+set t_Co=256      
 
 " searching
 : set incsearch
